@@ -7,3 +7,7 @@
 [Folien](http://konstantinkobs.github.io/RegEx)
 
 [Cheatsheet](http://konstantinkobs.github.io/RegEx/Cheatsheet.pdf)
+
+# Lizenz
+
+Die Aufgabenstellungen und Folien stehen unter der [MIT-Lizenz](http://de.wikipedia.org/wiki/MIT-Lizenz).
