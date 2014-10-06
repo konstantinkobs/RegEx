@@ -1,4 +1,4 @@
-# Informationen
+# Reguläre Ausdrücke *(8.10.2014 - Konstantin Kobs)*
 
 Alle Materialien sind unter `http://github.com/konstantinkobs/RegEx/` abrufbar.
 
@@ -21,8 +21,8 @@ Bis auf einige Zeichen mit besonderer Bedeutung (**Metacharacters**) stehen alle
 - `( )` definieren Gruppen
 - `{min,max}` hinter einem Buchstaben oder einer Gruppe geben die minimale und maximale Wiederholungsanzahl an; `{min,}` matcht alles **ab** `min` Vorkommnissen; `{anzahl}` matcht die genaue Anzahl `anzahl`
 - *Quantoren:* `+ = {1,}`, `* = {0,}` und `? = {0,1}`
-- `[ ]` wählen ein Zeichen aus der Menge der darin stehenden Zeichen aus
-- `[a-z]` matcht einen lateinischen Kleinbuchstaben, `[A-F]` einen lateinischen Großbuchstaben von A bis F
+- `[ ]` wählt eines der aus in der Menge stehenden Zeichen
+- `[a-z]` ist ein *Range* von `a` bis `z`; Ranges können beliebige Spannen haben
 - `.` matcht jedes Zeichen *(bis auf neue Zeilen)*
 - `[^a]` bedeutet: Jedes Zeichen außer `a`
 - `^` und `$` bezeichnen den Anfang und das Ende des zu durchsuchenden Textes
@@ -33,9 +33,7 @@ Bis auf einige Zeichen mit besonderer Bedeutung (**Metacharacters**) stehen alle
 
 ## Flags
 
-Flags sind Buchstaben, die am Ende des Regulären Ausdruckes stehen. Sie haben keine zu beachtende Reihenfolge und sind komplett optional. Ein Regulärer Ausdruck kann also auch nur aus den Delimitern und dem Pattern bestehen.
-
-Folgende drei Flags sind die bekanntesten:
+Buchstaben, die am Ende des Regulären Ausdruckes stehen. Sie haben keine zu beachtende Reihenfolge und sind optional.
 
 - `g` *(__g__lobal)*: Sucht alle Vorkommnisse im Text
 - `i` *(__i__gnore case)*: Nicht mehr auf Groß- und Kleinschreibung achten
@@ -43,10 +41,12 @@ Folgende drei Flags sind die bekanntesten:
 
 ## Greedy und Lazy *(Gierig und Genügsam)*
 
-Reguläre Ausdrücke sind von Haus aus *greedy*, das heißt, es wird eine möglichst große Zeichenkette gematcht. Manchmal ist dies nicht das gewünschte Verhalten. Der `+`-Quantor lässt sich mit einem nachgestellten `?` *lazy* machen, sprich, er matcht so kurze Zeichenketten wie möglich.
+Die Quantoren `+` und `*` sind von Haus aus *greedy*, das heißt, sie matchen eine möglichst große Zeichenkette. Manchmal ist dies nicht das gewünschte Verhalten. Sie lassen sich mit einem nachgestellten `?` *lazy* machen, sprich, sie matchen so kurze Zeichenketten wie möglich.
 
 ## Backreference
 
-Ein Pattern matcht einen Teil oder die gesamte Zeichenkette. Manchmal möchte man aber nicht alles aus diesem Match weiter verwenden, sondern nur Teile davon. **Beispiel:** Im Text ist der Inhalt, den wir extrahieren wollen, auf beiden Seiten mit `===` eingeschlossen. Der Reguläre Ausdruck `/===.+?===/g` würde alle Vorkommnisse finden, allerdings würden dort auch immer die `===` auf beiden Seiten mit vorkommen.
+Um nur auf Teile der gefundenen Zeichenkette zurückgreifen zu können, umschließen wir den Teil des Regulären Ausdrucks mit Klammern. Diese Abschnitte nennt man **Capturing Group**.
 
-**Lösung:** Nutzen wir *Gruppen*, also schließen wir Teile des Ausdrucks in Klammern ein, so können wir auf diese Gruppen später zugreifen. Der Ausdruck `/===(.+?)===/g` findet immer noch alle Vorkommnisse, allerdings wird auch der Inhalt in den Klammern nochmals einzeln gespeichert. Man kann dann auf die Inhalte der Gruppen im selben Ausdruck mit `\1` für die erste Gruppe, `\2` für die zweite Gruppe usw. zurückreferenzieren. Beim Ersetzen mit Hilfe von Regulären Ausdrucken wird üblicherweise mit `$1` auf die erste Gruppe zugegriffen.
+Im Pattern kann man dann mit `\1` auf die erste Gruppe zurückreferenzieren, mit `\2` auf die zweite usw.
+
+Beim Ersetzen von Text mit Hilfe von Regulären Ausdrücken wird mit `$1`, `$2`, usw. auf die zuvor entdeckten Gruppen zugegriffen.
