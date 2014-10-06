@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <title>Markdown Konverter</title>
+        <meta charset="utf-8">
+        
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                
+                box-sizing: border-box;
+            }
+            html, body{
+                height: 100%;
+            }
+            #input{
+                display: block;
+                width: 100%;
+                height: 40%;
+                
+                padding: 10px;
+                
+                font-family: monospace;
+                font-size: 100%;
+                
+                outline: 0;
+                border: 0;
+                
+                resize: none;
+            }
+            #konvertieren{
+                display: block;
+                width: 100%;
+                height: 5%;
+                
+                background: #bbb;
+                color: white;
+                
+                font-size: 80%;
+                
+                border: 0;
+                outline: 0;
+                
+                cursor: pointer;
+            }
+            #output{
+                padding: 10px;
+                overflow: auto;
+                height: 55%;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <!-- Eingabefeld -->
+        <textarea id="input" cols="30" rows="10"># Markdown
+## Ein Kurzprojekt
+
+Hallo, *dies* ist ein Markdown-Konverter, der mit **Regulären Ausdrücken** funktioniert und die einfachsten Markdown-Befehle beherrscht.
+
+# Überschriften
+## Zweite Überschriften
+
+[Links](http://google.de)
+![Bilder](data:image/png;base64,
+iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAABlBMVEUAAAD/
+//+l2Z/dAAAAM0lEQVR4nGP4/5/h/1+G/58ZDrAz3D/McH8yw83NDDeNGe4U
+g9C9zwz3gVLMDA/A6P9/AFGGFyjOXZtQAAAAAElFTkSuQmCC)
+
+Außerdem können Texte **fett** und *kursiv* angezeigt werden.</textarea>
+        
+        <!-- Button zum Umwandeln -->
+        <button id="konvertieren">Konvertieren</button>
+        
+        <!-- Ausgabebereich -->
+        <div id="output">
+            Hier steht dann die Ausgabe.
+        </div>
+        
+        <!-- JAVASCRIPT -->
+        <script>
+            
+            // Elemente auf der Seite
+            var input = document.getElementById("input"),
+                output = document.getElementById("output"),
+                konvertieren = document.getElementById("konvertieren");
+            
+            konvertieren.addEventListener("click", function(){
+                // Markdown Text auslesen
+                var markdown = input.value;
+                
+                /*****************************************
+                 * 
+                 * Hier den Text mit replace bearbeiten.
+                 * 
+                 * HINWEIS: Man kann mehrere Aufrufe der
+                 *          replace-Funktion direkt
+                 *          hintereinander und sogar
+                 *          untereinander schreiben.
+                 *          
+                 *    var html = markdown.replace(...)
+                 *                       .replace(...)
+                 *                       .replace(...);
+                 * 
+                 *****************************************/
+                var html =  markdown.replace(/\n/g, "<br>");
+                
+                
+                // Fertiges HTML anzeigen
+                output.innerHTML = html;
+                                        
+            });
+            
+        </script>
+        
+    </body>
+</html>

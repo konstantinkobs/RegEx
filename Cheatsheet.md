@@ -1,6 +1,6 @@
 # Informationen
 
-Alle Materialien sind unter `http://github.io/konstantinkobs/RegEx/` abrufbar.
+Alle Materialien sind unter `http://github.com/konstantinkobs/RegEx/` abrufbar.
 
 # Cheatsheet
 
@@ -49,6 +49,4 @@ Reguläre Ausdrücke sind von Haus aus *greedy*, das heißt, es wird eine mögli
 
 Ein Pattern matcht einen Teil oder die gesamte Zeichenkette. Manchmal möchte man aber nicht alles aus diesem Match weiter verwenden, sondern nur Teile davon. **Beispiel:** Im Text ist der Inhalt, den wir extrahieren wollen, auf beiden Seiten mit `===` eingeschlossen. Der Reguläre Ausdruck `/===.+?===/g` würde alle Vorkommnisse finden, allerdings würden dort auch immer die `===` auf beiden Seiten mit vorkommen.
 
-**Lösung:** Nutzen wir *Gruppen*, also schließen wir Teile des Ausdrucks in Klammern ein, so können wir auf diese Gruppen später zugreifen. Der Ausdruck `/===(.+?)===/g` findet immer noch alle Vorkommnisse, allerdings wird auch der Inhalt in den Klammern nochmals einzeln gespeichert. Man kann dann, zum Beispiel beim Ersetzen dieser Zeichenketten, mit `\1` auf die erste, mit `\2` auf die zweite, und mit `\n` auf die n-te Gruppe zugreifen. Man kann aber auch direkt im selben Ausdruck auf die vorher gematchte Gruppe zugreifen.
-
-*Anmerkung:* In einigen Programmiersprachen wird nicht mit `\1`, sondern mit `$1` auf eine Gruppe verwiesen.
+**Lösung:** Nutzen wir *Gruppen*, also schließen wir Teile des Ausdrucks in Klammern ein, so können wir auf diese Gruppen später zugreifen. Der Ausdruck `/===(.+?)===/g` findet immer noch alle Vorkommnisse, allerdings wird auch der Inhalt in den Klammern nochmals einzeln gespeichert. Man kann dann auf die Inhalte der Gruppen im selben Ausdruck mit `\1` für die erste Gruppe, `\2` für die zweite Gruppe usw. zurückreferenzieren. Beim Ersetzen mit Hilfe von Regulären Ausdrucken wird üblicherweise mit `$1` auf die erste Gruppe zugegriffen.

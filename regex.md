@@ -117,7 +117,7 @@ Erkennt:
 
 --
 
-### Aufgabe 1a *(Telefonnummererkennung)*
+### Aufgabe 1a *(Telefonnummern)*
 
 Schreiben Sie einen Regulären Ausdruck, der Telefonnummern in einem Text findet.
 
@@ -147,9 +147,9 @@ Schreiben Sie einen Regulären Ausdruck, der Telefonnummern in einem Text findet
 
 --
 
-### Aufgabe 1b *(Telefonnummererkennung)*
+### Aufgabe 1b *(Telefonnummern)*
 
-Vereinfachen Sie den Regulären Ausdruck mit den eben gelernten Abkürzungen.
+Vereinfachen und verbessern Sie den Regulären Ausdruck mit den eben gelernten Abkürzungen.
 
 --
 
@@ -170,6 +170,12 @@ Schreiben Sie einen Regulären Ausdruck, der eine Zahl auf die Teilbarkeit mit 2
 ### Aufgabe *(Registrierung mit Mail-Adresse)*
 
 Schreiben Sie einen Regulären Ausdruck, der überprüft, ob eine Mail-Adresse eine gültige Syntax hat.
+
+--
+
+### Aufgabe *(Internet-Adressen)*
+
+Schreiben Sie einen Regulären Ausdruck, der in einem Text Internet-Adressen findet und durch einen Link auf diese Seite ersetzt.
 
 --
 
