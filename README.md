@@ -10,4 +10,4 @@
 
 # Lizenz
 
-Die Aufgabenstellungen und Folien stehen unter der [MIT-Lizenz](http://de.wikipedia.org/wiki/MIT-Lizenz).
+Die Aufgabenstellungen und Folien stehen unter der [MIT-Lizenz](http://de.wikipedia.org/wiki/MIT-Lizenz) für die Weiterverwendung zur Verfügung.

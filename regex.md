@@ -185,6 +185,12 @@ Schreiben Sie einen Regulären Ausdruck, der eine IPv4 Adresse auf seine Syntax 
 
 --
 
+### Greedy und Lazy *(Gierig und Genügsam)*
+
+Reguläre Ausdrücke sind von Haus aus *greedy*, das heißt, es wird eine möglichst große Zeichenkette gematcht. Manchmal ist dies nicht das gewünschte Verhalten. Der `+`-Operator lässt sich mit einem nachgestellten `?` *lazy* machen, sprich, er matcht so kurze Zeichenketten wie möglich.
+
+--
+
 # Vorteile und Nachteile
 
 --
@@ -244,3 +250,4 @@ Schreiben Sie einen Regulären Ausdruck, der eine IPv4 Adresse auf seine Syntax 
 - [RegEx Crosswords](http://www.regexcrosswords.com/)
 - [Common RegEx JS](https://github.com/talyssonoc/CommonRegexJS)
 - [Demystifying Regular Expressions](https://www.youtube.com/watch?v=EkluES9Rvak)
+- [JavaScript RegEx Referenz](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
