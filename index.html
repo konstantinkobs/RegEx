@@ -554,8 +554,8 @@ oder erfüllt ist.</p>
   <div class="slide hidden" id="slide-18">
     <section class="slide-content"><h3 id="fragen-beim-schreiben-regul-rer-ausdr-cke">Fragen beim Schreiben Regulärer Ausdrücke</h3>
 <ol>
-<li>Welche Zeichenketten sollen gefunden werden?</li>
-<li>Welche Zeichenketten sollen <strong>nicht</strong> gefunden werden?</li>
+<li>Welche Zeichenketten sollen/sollen <strong>nicht</strong> gefunden werden?</li>
+<li>Wie ist das zu findende Muster aufgebaut?</li>
 <li>Kann man überhaupt den <em>perfekten</em> Ausdruck für diese Anwendung schreiben?</li>
 <li>Muss der Ausdruck noch spezifischer werden...</li>
 <li>oder reicht er im gegebenen Kontext aus?</li>
@@ -596,27 +596,6 @@ oder erfüllt ist.</p>
 </section>
   </div>
   <div class="slide hidden" id="slide-23">
-    <section class="slide-content"><h3 id="aufgabe-internet-adressen-">Aufgabe <em>(Internet-Adressen)</em></h3>
-<p>Schreiben Sie einen Regulären Ausdruck, der in einem Text Internet-Adressen findet und durch einen Link auf diese Seite ersetzt.</p>
-</section>
-  </div>
-  <div class="slide hidden" id="slide-24">
-    <section class="slide-content"><h3 id="aufgabe-datumsangaben-">Aufgabe <em>(Datumsangaben)</em></h3>
-<p>Schreiben Sie einen Regulären Ausdruck, der alle Datumsangaben im Abschnitt <em>&quot;Mauerfall&quot;</em> des deutschen Wikipedia-Artikels <em>&quot;Berliner Mauer&quot;</em> findet.</p>
-</section>
-  </div>
-  <div class="slide hidden" id="slide-25">
-    <section class="slide-content"><h3 id="aufgabe-registrierung-mit-mail-adresse-">Aufgabe <em>(Registrierung mit Mail-Adresse)</em></h3>
-<p>Schreiben Sie einen Regulären Ausdruck, der überprüft, ob eine Mail-Adresse eine gültige Syntax hat.</p>
-</section>
-  </div>
-  <div class="slide hidden" id="slide-26">
-    <section class="slide-content"><h3 id="aufgabe-ip-adressen-">Aufgabe <em>(IP Adressen)</em></h3>
-<p>Schreiben Sie einen Regulären Ausdruck, der eine IPv4 Adresse auf seine Syntax überprüft.</p>
-<p><strong>Beispiel:</strong> <code>192.168.0.1</code></p>
-</section>
-  </div>
-  <div class="slide hidden" id="slide-27">
     <section class="slide-content"><h3 id="backreference">Backreference</h3>
 <blockquote>
 <p>Auf Teile der gefundenen Zeichenkette zurückgreifen</p>
@@ -625,9 +604,33 @@ oder erfüllt ist.</p>
 <p><code>$1</code> beim Ersetzen</p>
 </section>
   </div>
+  <div class="slide hidden" id="slide-24">
+    <section class="slide-content"><h3 id="aufgabe-3-internet-adressen-">Aufgabe 3 <em>(Internet-Adressen)</em></h3>
+<p>Schreiben Sie einen Regulären Ausdruck, der in einem Text Internet-Adressen findet und durch einen Link auf diese Seite ersetzt.</p>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-25">
+    <section class="slide-content"><h3 id="aufgabe-4-datumsangaben-">Aufgabe 4 <em>(Datumsangaben)</em></h3>
+<p>Schreiben Sie einen Regulären Ausdruck, der alle Datumsangaben im Abschnitt <em>&quot;Mauerfall&quot;</em> des deutschen Wikipedia-Artikels <em>&quot;Berliner Mauer&quot;</em> findet.</p>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-26">
+    <section class="slide-content"><h3 id="aufgabe-5-registrierung-mit-mail-adresse-">Aufgabe 5 <em>(Registrierung mit Mail-Adresse)</em></h3>
+<p>Schreiben Sie einen Regulären Ausdruck, der überprüft, ob eine Mail-Adresse eine gültige Syntax hat.</p>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-27">
+    <section class="slide-content"><h3 id="aufgabe-6-ip-adressen-">Aufgabe 6 <em>(IP Adressen)</em></h3>
+<p>Schreiben Sie einen Regulären Ausdruck, der eine IPv4 Adresse auf seine Syntax überprüft.</p>
+<p><strong>Beispiel:</strong> <code>192.168.0.1</code></p>
+</section>
+  </div>
   <div class="slide hidden" id="slide-28">
     <section class="slide-content"><h3 id="greedy-und-lazy-gierig-und-gen-gsam-">Greedy und Lazy <em>(Gierig und Genügsam)</em></h3>
-<p>Reguläre Ausdrücke sind von Haus aus <em>greedy</em>, das heißt, es wird eine möglichst große Zeichenkette gematcht. Manchmal ist dies nicht das gewünschte Verhalten. Der <code>+</code>-Operator lässt sich mit einem nachgestellten <code>?</code> <em>lazy</em> machen, sprich, er matcht so kurze Zeichenketten wie möglich.</p>
+<ul>
+<li><code>+</code> und <code>*</code> sind greedy</li>
+<li><code>+?</code> und <code>*?</code> sind lazy</li>
+</ul>
 </section>
   </div>
   <div class="slide hidden" id="slide-29">

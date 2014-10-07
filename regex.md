@@ -166,6 +166,16 @@ Schreiben Sie einen Regulären Ausdruck, der eine Zahl auf die Teilbarkeit mit 2
 
 --
 
+### Backreference
+
+> Auf Teile der gefundenen Zeichenkette zurückgreifen
+
+`\1` innerhalb eines Ausdruckes
+
+`$1` beim Ersetzen
+
+--
+
 ### Aufgabe 3 *(Internet-Adressen)*
 
 Schreiben Sie einen Regulären Ausdruck, der in einem Text Internet-Adressen findet und durch einen Link auf diese Seite ersetzt.
@@ -192,19 +202,10 @@ Schreiben Sie einen Regulären Ausdruck, der eine IPv4 Adresse auf seine Syntax 
 
 --
 
-### Backreference
-
-> Auf Teile der gefundenen Zeichenkette zurückgreifen
-
-`\1` innerhalb eines Ausdruckes
-
-`$1` beim Ersetzen
-
---
-
 ### Greedy und Lazy *(Gierig und Genügsam)*
 
-Reguläre Ausdrücke sind von Haus aus *greedy*, das heißt, es wird eine möglichst große Zeichenkette gematcht. Manchmal ist dies nicht das gewünschte Verhalten. Der `+`-Operator lässt sich mit einem nachgestellten `?` *lazy* machen, sprich, er matcht so kurze Zeichenketten wie möglich.
+- `+` und `*` sind greedy
+- `+?` und `*?` sind lazy
 
 --
 
