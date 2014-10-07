@@ -123,14 +123,13 @@ Schreiben Sie einen Regulären Ausdruck, der Telefonnummern in einem Text findet
 
 --
 
-### Vorgehen beim Schreiben Regulärer Ausdrücke
+### Fragen beim Schreiben Regulärer Ausdrücke
 
-1. Beispiele aufstellen, die gefunden werden sollen
-1. Beispiele aufstellen, die **nicht** gefunden werden sollen
-1. Syntax analysieren und in RegEx-Syntax übertragen
-1. Regulären Ausdruck schreiben
-1. An Beispielen testen
-1. Real verwenden und gegebenfalls anpassen
+1. Welche Zeichenketten sollen/sollen **nicht** gefunden werden?
+1. Wie ist das zu findende Muster aufgebaut?
+1. Kann man überhaupt den *perfekten* Ausdruck für diese Anwendung schreiben?
+1. Muss der Ausdruck noch spezifischer werden...
+1. oder reicht er im gegebenen Kontext aus?
 
 --
 
@@ -161,33 +160,45 @@ Vereinfachen und verbessern Sie den Regulären Ausdruck mit den eben gelernten A
 
 --
 
-### Aufgabe *(Durch 20 teilbar)*
+### Aufgabe 2 *(Durch 20 teilbar)*
 
 Schreiben Sie einen Regulären Ausdruck, der eine Zahl auf die Teilbarkeit mit 20 prüft.
 
 --
 
-### Aufgabe *(Registrierung mit Mail-Adresse)*
-
-Schreiben Sie einen Regulären Ausdruck, der überprüft, ob eine Mail-Adresse eine gültige Syntax hat.
-
---
-
-### Aufgabe *(Internet-Adressen)*
+### Aufgabe 3 *(Internet-Adressen)*
 
 Schreiben Sie einen Regulären Ausdruck, der in einem Text Internet-Adressen findet und durch einen Link auf diese Seite ersetzt.
 
 --
 
-### Aufgabe *(Datumsangaben)*
+### Aufgabe 4 *(Datumsangaben)*
 
-Schreiben Sie einen Regulären Ausdruck, der alle Datumsangaben im deutschen Wikipedia-Artikel zu *"..."* findet.
+Schreiben Sie einen Regulären Ausdruck, der alle Datumsangaben im Abschnitt *"Mauerfall"* des deutschen Wikipedia-Artikels *"Berliner Mauer"* findet.
 
 --
 
-### Aufgabe *(IP Adressen)*
+### Aufgabe 5 *(Registrierung mit Mail-Adresse)*
+
+Schreiben Sie einen Regulären Ausdruck, der überprüft, ob eine Mail-Adresse eine gültige Syntax hat.
+
+--
+
+### Aufgabe 6 *(IP Adressen)*
 
 Schreiben Sie einen Regulären Ausdruck, der eine IPv4 Adresse auf seine Syntax überprüft.
+
+**Beispiel:** `192.168.0.1`
+
+--
+
+### Backreference
+
+> Auf Teile der gefundenen Zeichenkette zurückgreifen
+
+`\1` innerhalb eines Ausdruckes
+
+`$1` beim Ersetzen
 
 --
 
@@ -213,7 +224,7 @@ Reguläre Ausdrücke sind von Haus aus *greedy*, das heißt, es wird eine mögli
 
 - Leicht unübersichtlich
 - Schnell fehlerhafte Übereinstimmungen *(false positives)*
-- Langsam durch Backtracking
+- Langsam durch *Backtracking*
 
 --
 
@@ -248,6 +259,10 @@ Reguläre Ausdrücke sind von Haus aus *greedy*, das heißt, es wird eine mögli
 `[Link](http://google.de)` > [Link](http://google.de)
 
 `![Bild](bilder/bild.png)` > ![Bild](bilder/bild.png)
+
+--
+
+# Endliche Automaten
 
 --
 

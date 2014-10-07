@@ -547,19 +547,18 @@ oder erfüllt ist.</p>
 </section>
   </div>
   <div class="slide hidden" id="slide-17">
-    <section class="slide-content"><h3 id="aufgabe-1a-telefonnummererkennung-">Aufgabe 1a <em>(Telefonnummererkennung)</em></h3>
+    <section class="slide-content"><h3 id="aufgabe-1a-telefonnummern-">Aufgabe 1a <em>(Telefonnummern)</em></h3>
 <p>Schreiben Sie einen Regulären Ausdruck, der Telefonnummern in einem Text findet.</p>
 </section>
   </div>
   <div class="slide hidden" id="slide-18">
-    <section class="slide-content"><h3 id="vorgehen-beim-schreiben-regul-rer-ausdr-cke">Vorgehen beim Schreiben Regulärer Ausdrücke</h3>
+    <section class="slide-content"><h3 id="fragen-beim-schreiben-regul-rer-ausdr-cke">Fragen beim Schreiben Regulärer Ausdrücke</h3>
 <ol>
-<li>Beispiele aufstellen, die gefunden werden sollen</li>
-<li>Beispiele aufstellen, die <strong>nicht</strong> gefunden werden sollen</li>
-<li>Syntax analysieren und in RegEx-Syntax übertragen</li>
-<li>Regulären Ausdruck schreiben</li>
-<li>An Beispielen testen</li>
-<li>Real verwenden und gegebenfalls anpassen</li>
+<li>Welche Zeichenketten sollen gefunden werden?</li>
+<li>Welche Zeichenketten sollen <strong>nicht</strong> gefunden werden?</li>
+<li>Kann man überhaupt den <em>perfekten</em> Ausdruck für diese Anwendung schreiben?</li>
+<li>Muss der Ausdruck noch spezifischer werden...</li>
+<li>oder reicht er im gegebenen Kontext aus?</li>
 </ol>
 </section>
   </div>
@@ -578,7 +577,7 @@ oder erfüllt ist.</p>
 </section>
   </div>
   <div class="slide hidden" id="slide-20">
-    <section class="slide-content"><h3 id="aufgabe-1b-telefonnummererkennung-">Aufgabe 1b <em>(Telefonnummererkennung)</em></h3>
+    <section class="slide-content"><h3 id="aufgabe-1b-telefonnummern-">Aufgabe 1b <em>(Telefonnummern)</em></h3>
 <p>Vereinfachen und verbessern Sie den Regulären Ausdruck mit den eben gelernten Abkürzungen.</p>
 </section>
   </div>
@@ -592,35 +591,50 @@ oder erfüllt ist.</p>
 </section>
   </div>
   <div class="slide hidden" id="slide-22">
-    <section class="slide-content"><h3 id="aufgabe-durch-20-teilbar-">Aufgabe <em>(Durch 20 teilbar)</em></h3>
+    <section class="slide-content"><h3 id="aufgabe-2-durch-20-teilbar-">Aufgabe 2 <em>(Durch 20 teilbar)</em></h3>
 <p>Schreiben Sie einen Regulären Ausdruck, der eine Zahl auf die Teilbarkeit mit 20 prüft.</p>
 </section>
   </div>
   <div class="slide hidden" id="slide-23">
-    <section class="slide-content"><h3 id="aufgabe-registrierung-mit-mail-adresse-">Aufgabe <em>(Registrierung mit Mail-Adresse)</em></h3>
-<p>Schreiben Sie einen Regulären Ausdruck, der überprüft, ob eine Mail-Adresse eine gültige Syntax hat.</p>
+    <section class="slide-content"><h3 id="aufgabe-internet-adressen-">Aufgabe <em>(Internet-Adressen)</em></h3>
+<p>Schreiben Sie einen Regulären Ausdruck, der in einem Text Internet-Adressen findet und durch einen Link auf diese Seite ersetzt.</p>
 </section>
   </div>
   <div class="slide hidden" id="slide-24">
     <section class="slide-content"><h3 id="aufgabe-datumsangaben-">Aufgabe <em>(Datumsangaben)</em></h3>
-<p>Schreiben Sie einen Regulären Ausdruck, der alle Datumsangaben im deutschen Wikipedia-Artikel zu <em>&quot;...&quot;</em> findet.</p>
+<p>Schreiben Sie einen Regulären Ausdruck, der alle Datumsangaben im Abschnitt <em>&quot;Mauerfall&quot;</em> des deutschen Wikipedia-Artikels <em>&quot;Berliner Mauer&quot;</em> findet.</p>
 </section>
   </div>
   <div class="slide hidden" id="slide-25">
-    <section class="slide-content"><h3 id="aufgabe-ip-adressen-">Aufgabe <em>(IP Adressen)</em></h3>
-<p>Schreiben Sie einen Regulären Ausdruck, der eine IPv4 Adresse auf seine Syntax überprüft.</p>
+    <section class="slide-content"><h3 id="aufgabe-registrierung-mit-mail-adresse-">Aufgabe <em>(Registrierung mit Mail-Adresse)</em></h3>
+<p>Schreiben Sie einen Regulären Ausdruck, der überprüft, ob eine Mail-Adresse eine gültige Syntax hat.</p>
 </section>
   </div>
   <div class="slide hidden" id="slide-26">
+    <section class="slide-content"><h3 id="aufgabe-ip-adressen-">Aufgabe <em>(IP Adressen)</em></h3>
+<p>Schreiben Sie einen Regulären Ausdruck, der eine IPv4 Adresse auf seine Syntax überprüft.</p>
+<p><strong>Beispiel:</strong> <code>192.168.0.1</code></p>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-27">
+    <section class="slide-content"><h3 id="backreference">Backreference</h3>
+<blockquote>
+<p>Auf Teile der gefundenen Zeichenkette zurückgreifen</p>
+</blockquote>
+<p><code>\1</code> innerhalb eines Ausdruckes</p>
+<p><code>$1</code> beim Ersetzen</p>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-28">
     <section class="slide-content"><h3 id="greedy-und-lazy-gierig-und-gen-gsam-">Greedy und Lazy <em>(Gierig und Genügsam)</em></h3>
 <p>Reguläre Ausdrücke sind von Haus aus <em>greedy</em>, das heißt, es wird eine möglichst große Zeichenkette gematcht. Manchmal ist dies nicht das gewünschte Verhalten. Der <code>+</code>-Operator lässt sich mit einem nachgestellten <code>?</code> <em>lazy</em> machen, sprich, er matcht so kurze Zeichenketten wie möglich.</p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-27">
+  <div class="slide hidden" id="slide-29">
     <section class="slide-content"><h1 id="vorteile-und-nachteile">Vorteile und Nachteile</h1>
 </section>
   </div>
-  <div class="slide hidden" id="slide-28">
+  <div class="slide hidden" id="slide-30">
     <section class="slide-content"><h3 id="vorteile">Vorteile</h3>
 <ul>
 <li>Schnell änderbar</li>
@@ -629,20 +643,20 @@ oder erfüllt ist.</p>
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-29">
+  <div class="slide hidden" id="slide-31">
     <section class="slide-content"><h3 id="nachteile">Nachteile</h3>
 <ul>
 <li>Leicht unübersichtlich</li>
 <li>Schnell fehlerhafte Übereinstimmungen <em>(false positives)</em></li>
-<li>Langsam durch Backtracking</li>
+<li>Langsam durch <em>Backtracking</em></li>
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-30">
+  <div class="slide hidden" id="slide-32">
     <section class="slide-content"><h1 id="wie-funktioniert-s-">Wie funktioniert&#39;s?</h1>
 </section>
   </div>
-  <div class="slide hidden" id="slide-31">
+  <div class="slide hidden" id="slide-33">
     <section class="slide-content"><h3 id="backtracking">Backtracking</h3>
 <blockquote>
 <p>Wie findet der Computer überhaupt alle Vorkommnisse des Ausdruckes?</p>
@@ -650,7 +664,7 @@ oder erfüllt ist.</p>
 <p><em>Beispiel:</em> <code>/a+aab/</code></p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-32">
+  <div class="slide hidden" id="slide-34">
     <section class="slide-content"><h3 id="abschlussprojekt-markdown">Abschlussprojekt: Markdown</h3>
 <ul>
 <li>Text zu HTML</li>
@@ -659,7 +673,7 @@ oder erfüllt ist.</p>
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-33">
+  <div class="slide hidden" id="slide-35">
     <section class="slide-content"><p><code># Überschrift</code></p>
 <p><code>## Zweite Überschrift</code></p>
 <p><code>*Kursiv*</code> &gt; <em>Kursiv</em></p>
@@ -668,7 +682,11 @@ oder erfüllt ist.</p>
 <p><code>![Bild](bilder/bild.png)</code> &gt; <img src="bilder/bild.png" alt="Bild"></p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-34">
+  <div class="slide hidden" id="slide-36">
+    <section class="slide-content"><h1 id="endliche-automaten">Endliche Automaten</h1>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-37">
     <section class="slide-content"><h3 id="links">Links</h3>
 <ul>
 <li><a href="http://www.regexcrosswords.com/">RegEx Crosswords</a></li>
@@ -678,7 +696,7 @@ oder erfüllt ist.</p>
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-35">
+  <div class="slide hidden" id="slide-38">
     <section class="slide-content"><div class="author">
   <h1 class="name">Konstantin Kobs</h1>
     <h3 class="twitter">
