@@ -530,28 +530,33 @@ oder erfüllt ist.</p>
 </section>
   </div>
   <div class="slide hidden" id="slide-15">
-    <section class="slide-content"><h1 id="-regexr-com-http-regexr-com-"><a href="http://regexr.com">regexr.com</a></h1>
+    <section class="slide-content"><h3 id="aufbau">Aufbau</h3>
+<p><code>/Pattern/Flags</code></p>
 </section>
   </div>
   <div class="slide hidden" id="slide-16">
+    <section class="slide-content"><h1 id="-regexr-com-http-regexr-com-"><a href="http://regexr.com">regexr.com</a></h1>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-17">
     <section class="slide-content"><h3 id="pattern-1-">Pattern (1)</h3>
 <ul>
 <li>Buchstaben und Zahlen matchen sich selbst</li>
 <li>Mehrere Möglichkeiten mit <code>|</code></li>
 <li>Gruppen mit Klammern <code>( )</code></li>
-<li>Geschweifte Klammern <code>{min,max}</code></li>
+<li>Geschweifte Klammern <code>{min,max}</code> oder <code>{anzahl}</code></li>
 <li>Eckige Klammern <code>[ ]</code> wählen ein Zeichen daraus aus</li>
 <li>Ranges, zum Beispiel <code>[a-z]</code></li>
 <li>Sonderzeichen müssen mit Backslash escaped werden</li>
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-17">
-    <section class="slide-content"><h3 id="aufgabe-1a-telefonnummern-">Aufgabe 1a <em>(Telefonnummern)</em></h3>
+  <div class="slide hidden" id="slide-18">
+    <section class="slide-content"><h3 id="aufgabe-1-telefonnummern-">Aufgabe 1 <em>(Telefonnummern)</em></h3>
 <p>Schreiben Sie einen Regulären Ausdruck, der Telefonnummern in einem Text findet.</p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-18">
+  <div class="slide hidden" id="slide-19">
     <section class="slide-content"><h3 id="fragen-beim-schreiben-regul-rer-ausdr-cke">Fragen beim Schreiben Regulärer Ausdrücke</h3>
 <ol>
 <li>Welche Zeichenketten sollen/sollen <strong>nicht</strong> gefunden werden?</li>
@@ -562,23 +567,9 @@ oder erfüllt ist.</p>
 </ol>
 </section>
   </div>
-  <div class="slide hidden" id="slide-19">
-    <section class="slide-content"><h3 id="pattern-2-">Pattern (2)</h3>
-<ul>
-<li><code>.</code> matcht jedes Zeichen <em>(bis auf neue Zeilen)</em></li>
-<li><code>+ = {1,}</code>, <code>* = {0,}</code> und <code>? = {0,1}</code></li>
-<li><code>[^a]</code> bedeutet: Jedes Zeichen außer <code>a</code></li>
-<li><code>^</code> und <code>$</code> bezeichnen den Anfang und das Ende der Zeichenkette</li>
-<li><code>\d = [0-9]</code>; <code>\D = [^\d]</code></li>
-<li><code>\w = [a-zA-Z0-9]</code>; <code>\W = [^\w]</code></li>
-<li><code>\s</code> sind Leerräume und neue Zeilen; <code>\S</code> Gegenteil</li>
-<li>Mit <code>\b</code> stellt man Wortanfänge und -enden dar</li>
-</ul>
-</section>
-  </div>
   <div class="slide hidden" id="slide-20">
-    <section class="slide-content"><h3 id="aufgabe-1b-telefonnummern-">Aufgabe 1b <em>(Telefonnummern)</em></h3>
-<p>Vereinfachen und verbessern Sie den Regulären Ausdruck mit den eben gelernten Abkürzungen.</p>
+    <section class="slide-content"><h3 id="aufgabe-2-durch-20-teilbar-">Aufgabe 2 <em>(Durch 20 teilbar)</em></h3>
+<p>Schreiben Sie einen Regulären Ausdruck, der eine Zahl auf die Teilbarkeit mit 20 prüft.</p>
 </section>
   </div>
   <div class="slide hidden" id="slide-21">
@@ -591,46 +582,55 @@ oder erfüllt ist.</p>
 </section>
   </div>
   <div class="slide hidden" id="slide-22">
-    <section class="slide-content"><h3 id="aufgabe-2-durch-20-teilbar-">Aufgabe 2 <em>(Durch 20 teilbar)</em></h3>
-<p>Schreiben Sie einen Regulären Ausdruck, der eine Zahl auf die Teilbarkeit mit 20 prüft.</p>
+    <section class="slide-content"><h3 id="aufgabe-3-internet-adressen-">Aufgabe 3 <em>(Internet-Adressen)</em></h3>
+<p>Schreiben Sie einen Regulären Ausdruck, der in einem Text Internet-Adressen findet.</p>
 </section>
   </div>
   <div class="slide hidden" id="slide-23">
+    <section class="slide-content"><h3 id="pattern-2-">Pattern (2)</h3>
+<ul>
+<li><code>.</code> matcht jedes Zeichen <em>(bis auf neue Zeilen)</em></li>
+<li><code>+ = {1,}</code>, <code>* = {0,}</code> und <code>? = {0,1}</code></li>
+<li><code>[^a]</code> bedeutet: Jedes Zeichen außer <code>a</code></li>
+<li><code>^</code> und <code>$</code>: Anfang und Ende der Zeichenkette</li>
+<li><code>\d = [0-9]</code>; <code>\D = [^\d]</code></li>
+<li><code>\w = [a-zA-Z0-9]</code>; <code>\W = [^\w]</code></li>
+<li><code>\s</code> sind Leerräume und neue Zeilen; <code>\S</code> Gegenteil</li>
+<li><code>\b</code>: Wortanfänge und -enden</li>
+</ul>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-24">
+    <section class="slide-content"><h3 id="aufgabe-4-datumsangaben-">Aufgabe 4 <em>(Datumsangaben)</em></h3>
+<p>Schreiben Sie einen Regulären Ausdruck, der alle Datumsangaben im Abschnitt <em>&quot;Mauerfall&quot;</em> des deutschen Wikipedia-Artikels <em>&quot;Berliner Mauer&quot;</em> findet.</p>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-25">
+    <section class="slide-content"><h3 id="aufgabe-5-registrierung-mit-mail-adresse-">Aufgabe 5 <em>(Registrierung mit Mail-Adresse)</em></h3>
+<p>Schreiben Sie einen Regulären Ausdruck, der überprüft, ob eine Mail-Adresse eine gültige Syntax hat.</p>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-26">
+    <section class="slide-content"><h3 id="aufgabe-6-ip-adressen-">Aufgabe 6 <em>(IP Adressen)</em></h3>
+<p>Schreiben Sie einen Regulären Ausdruck, der eine IPv4 Adresse auf seine Syntax prüft.</p>
+<p><strong>Beispiel:</strong> <code>192.168.0.1</code></p>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-27">
+    <section class="slide-content"><h3 id="greedy-und-lazy-gierig-und-gen-gsam-">Greedy und Lazy <em>(Gierig und Genügsam)</em></h3>
+<ul>
+<li><code>+</code> und <code>*</code> sind greedy</li>
+<li><code>+?</code> und <code>*?</code> sind lazy</li>
+</ul>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-28">
     <section class="slide-content"><h3 id="backreference">Backreference</h3>
 <blockquote>
 <p>Auf Teile der gefundenen Zeichenkette zurückgreifen</p>
 </blockquote>
 <p><code>\1</code> innerhalb eines Ausdruckes</p>
 <p><code>$1</code> beim Ersetzen</p>
-</section>
-  </div>
-  <div class="slide hidden" id="slide-24">
-    <section class="slide-content"><h3 id="aufgabe-3-internet-adressen-">Aufgabe 3 <em>(Internet-Adressen)</em></h3>
-<p>Schreiben Sie einen Regulären Ausdruck, der in einem Text Internet-Adressen findet und durch einen Link auf diese Seite ersetzt.</p>
-</section>
-  </div>
-  <div class="slide hidden" id="slide-25">
-    <section class="slide-content"><h3 id="aufgabe-4-datumsangaben-">Aufgabe 4 <em>(Datumsangaben)</em></h3>
-<p>Schreiben Sie einen Regulären Ausdruck, der alle Datumsangaben im Abschnitt <em>&quot;Mauerfall&quot;</em> des deutschen Wikipedia-Artikels <em>&quot;Berliner Mauer&quot;</em> findet.</p>
-</section>
-  </div>
-  <div class="slide hidden" id="slide-26">
-    <section class="slide-content"><h3 id="aufgabe-5-registrierung-mit-mail-adresse-">Aufgabe 5 <em>(Registrierung mit Mail-Adresse)</em></h3>
-<p>Schreiben Sie einen Regulären Ausdruck, der überprüft, ob eine Mail-Adresse eine gültige Syntax hat.</p>
-</section>
-  </div>
-  <div class="slide hidden" id="slide-27">
-    <section class="slide-content"><h3 id="aufgabe-6-ip-adressen-">Aufgabe 6 <em>(IP Adressen)</em></h3>
-<p>Schreiben Sie einen Regulären Ausdruck, der eine IPv4 Adresse auf seine Syntax überprüft.</p>
-<p><strong>Beispiel:</strong> <code>192.168.0.1</code></p>
-</section>
-  </div>
-  <div class="slide hidden" id="slide-28">
-    <section class="slide-content"><h3 id="greedy-und-lazy-gierig-und-gen-gsam-">Greedy und Lazy <em>(Gierig und Genügsam)</em></h3>
-<ul>
-<li><code>+</code> und <code>*</code> sind greedy</li>
-<li><code>+?</code> und <code>*?</code> sind lazy</li>
-</ul>
 </section>
   </div>
   <div class="slide hidden" id="slide-29">

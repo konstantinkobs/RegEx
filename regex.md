@@ -101,6 +101,12 @@ Erkennt:
 
 --
 
+### Aufbau
+
+`/Pattern/Flags`
+
+--
+
 # [regexr.com](http://regexr.com)
 
 --
@@ -110,14 +116,14 @@ Erkennt:
 - Buchstaben und Zahlen matchen sich selbst
 - Mehrere Möglichkeiten mit `|`
 - Gruppen mit Klammern `( )`
-- Geschweifte Klammern `{min,max}`
+- Geschweifte Klammern `{min,max}` oder `{anzahl}`
 - Eckige Klammern `[ ]` wählen ein Zeichen daraus aus
 - Ranges, zum Beispiel `[a-z]`
 - Sonderzeichen müssen mit Backslash escaped werden
 
 --
 
-### Aufgabe 1a *(Telefonnummern)*
+### Aufgabe 1 *(Telefonnummern)*
 
 Schreiben Sie einen Regulären Ausdruck, der Telefonnummern in einem Text findet.
 
@@ -133,22 +139,9 @@ Schreiben Sie einen Regulären Ausdruck, der Telefonnummern in einem Text findet
 
 --
 
-### Pattern (2)
+### Aufgabe 2 *(Durch 20 teilbar)*
 
-- `.` matcht jedes Zeichen *(bis auf neue Zeilen)*
-- `+ = {1,}`, `* = {0,}` und `? = {0,1}`
-- `[^a]` bedeutet: Jedes Zeichen außer `a`
-- `^` und `$` bezeichnen den Anfang und das Ende der Zeichenkette
-- `\d = [0-9]`; `\D = [^\d]`
-- `\w = [a-zA-Z0-9]`; `\W = [^\w]`
-- `\s` sind Leerräume und neue Zeilen; `\S` Gegenteil
-- Mit `\b` stellt man Wortanfänge und -enden dar
-
---
-
-### Aufgabe 1b *(Telefonnummern)*
-
-Vereinfachen und verbessern Sie den Regulären Ausdruck mit den eben gelernten Abkürzungen.
+Schreiben Sie einen Regulären Ausdruck, der eine Zahl auf die Teilbarkeit mit 20 prüft.
 
 --
 
@@ -160,25 +153,22 @@ Vereinfachen und verbessern Sie den Regulären Ausdruck mit den eben gelernten A
 
 --
 
-### Aufgabe 2 *(Durch 20 teilbar)*
-
-Schreiben Sie einen Regulären Ausdruck, der eine Zahl auf die Teilbarkeit mit 20 prüft.
-
---
-
-### Backreference
-
-> Auf Teile der gefundenen Zeichenkette zurückgreifen
-
-`\1` innerhalb eines Ausdruckes
-
-`$1` beim Ersetzen
-
---
-
 ### Aufgabe 3 *(Internet-Adressen)*
 
-Schreiben Sie einen Regulären Ausdruck, der in einem Text Internet-Adressen findet und durch einen Link auf diese Seite ersetzt.
+Schreiben Sie einen Regulären Ausdruck, der in einem Text Internet-Adressen findet.
+
+--
+
+### Pattern (2)
+
+- `.` matcht jedes Zeichen *(bis auf neue Zeilen)*
+- `+ = {1,}`, `* = {0,}` und `? = {0,1}`
+- `[^a]` bedeutet: Jedes Zeichen außer `a`
+- `^` und `$`: Anfang und Ende der Zeichenkette
+- `\d = [0-9]`; `\D = [^\d]`
+- `\w = [a-zA-Z0-9]`; `\W = [^\w]`
+- `\s` sind Leerräume und neue Zeilen; `\S` Gegenteil
+- `\b`: Wortanfänge und -enden
 
 --
 
@@ -196,7 +186,7 @@ Schreiben Sie einen Regulären Ausdruck, der überprüft, ob eine Mail-Adresse e
 
 ### Aufgabe 6 *(IP Adressen)*
 
-Schreiben Sie einen Regulären Ausdruck, der eine IPv4 Adresse auf seine Syntax überprüft.
+Schreiben Sie einen Regulären Ausdruck, der eine IPv4 Adresse auf seine Syntax prüft.
 
 **Beispiel:** `192.168.0.1`
 
@@ -206,6 +196,16 @@ Schreiben Sie einen Regulären Ausdruck, der eine IPv4 Adresse auf seine Syntax 
 
 - `+` und `*` sind greedy
 - `+?` und `*?` sind lazy
+
+--
+
+### Backreference
+
+> Auf Teile der gefundenen Zeichenkette zurückgreifen
+
+`\1` innerhalb eines Ausdruckes
+
+`$1` beim Ersetzen
 
 --
 
